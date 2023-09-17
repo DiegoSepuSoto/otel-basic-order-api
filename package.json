@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "tsc",
-    "start": "env npx ts-node --require ./src/instrumentation.ts ./src/app.ts"
+    "dev-start": "env npx ts-node --require ./src/instrumentation.ts ./src/app.ts"
   },
   "dependencies": {
     "@opentelemetry/api": "^1.4.1",
