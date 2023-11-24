@@ -1,6 +1,7 @@
 import express from 'express';
 import axios from "axios";
 import winston from "winston";
+import cors from 'cors';
 
 const logger = winston.createLogger({
     level: 'info',
@@ -10,6 +11,7 @@ const logger = winston.createLogger({
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/order', async (req, res) => {
     const orderID = req.query.orderID;
